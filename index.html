@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Dot Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="game.js" defer></script>
+</head>
+<body>
+    <h1>SQL Dot Game</h1>
+    <div id="game-message">Find the target...</div>
+    <input type="text" id="sql-query" placeholder="Type SQL query here">
+    <button id="execute-query">SQL Query</button>
+    <div id="animation-container">
+        <svg id="animation-icon" width="50" height="50" viewBox="0 0 24 24" fill="gray" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24H14.81L12 2 9.19 9.24H2L7.46 13.97 5.82 21z"/>
+        </svg>
+    </div>
+
+    
+    <div id="tables">
+        <div id="table-a" class="table-container">
+            <h2>Table A</h2>
+            <div id="column-names-a" class="column-names"></div>
+            <div id="dots-a" class="dots-container"></div>
+        </div>
+        <div id="table-b" class="table-container">
+            <h2>Table B</h2>
+            <div id="column-names-b" class="column-names"></div>
+            <div id="dots-b" class="dots-container"></div>
+        </div>
+    </div>
+</body>
+</html>

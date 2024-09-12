@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+input, button {
+    font-size: 16px; /* Increase font size for readability */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+#sql-query {
+    width: 80%; /* Make the input field wider */
+    height: 40px; /* Increase height for better usability */
+    font-size: 18px; /* Increase font size for better readability */
+}
+
+#tables {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.table-container {
+    width: 45%;
+}
+
+.column-names {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.column-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.dots-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 12px;
+    width: 100%;
+    height: 80vh; /* Adjust height to fit viewport */
+    max-height: 350px; /* Set a max height to prevent excessive scaling */
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1; /* Maintain square shape */
+    border-radius: 50%;
+    background-color: #d3d3d3; /* Default gray color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text color */
+    font-size: 16px; /* Adjust font size if needed */
+}
+
+#animation-container {
+    position: absolute; /* Position it absolutely to control its placement */
+    top: 100px; /* Adjust this value to position it directly underneath the input field */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the container */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    overflow: hidden;
+    display: flex; /* Center content horizontally */
+    align-items: center;
+    justify-content: center;
+}
+
+#animation-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    color: gray; /* Default color */
+    width: 100%; /* Ensure the icon fits the container */
+    height: 100%; /* Ensure the icon fits the container */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.animate-icon {
+    animation: slideAndChange 2s ease-out forwards; /* Apply animation */
+}
+
+@keyframes slideAndChange {
+    0% {
+        transform: translateX(-100%) translateY(-50%);
+        color: rgb(186, 138, 138);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(50%) translateY(-50%);
+        color: gold;
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%) translateY(-50%);
+        color: pink;
+        opacity: 0;
+    }
+}
+.gray {
+    background-color: #d3d3d3;
+}
+
+.joined {
+    background-color: rgb(152, 93, 188);
+}
+
+.selected {
+    background-color: rgb(37, 130, 206);
+}
+
+.column-name {
+    display: inline-block;
+    margin: 5px;
+}

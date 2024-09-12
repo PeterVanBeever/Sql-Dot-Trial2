@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 10px;
+}
+
+.dot {
+    width: 40px;
+    height: 40px;
+    background-color: #61dafb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.clicked {
+    background-color: #282c34;
+    cursor: default;
+}
+
+#counter {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/* Color for dots in a new sequence */
+.new-sequence .dot {
+    background-color: #ff6347; /* Tomato color */
+}
